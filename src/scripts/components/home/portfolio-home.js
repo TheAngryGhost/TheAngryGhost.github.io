@@ -89,7 +89,7 @@ function aboutSection() {
                     'I am a freshman Robotics major with a passion for bridging the gap between hardware logic and software creativity. My journey began with independent projects like ',
                     tag('em', 'Province of Music'),
                     ', where I learned to architect complex systems alone. Today, I apply those skills collaboratively at ',
-                    strong('Proto Robotics'),
+                    strong('PROTO Robotics'),
                     ', helping to build the next generation of STEM education tools.',
                     { class: 'text-muted' },
                 ),

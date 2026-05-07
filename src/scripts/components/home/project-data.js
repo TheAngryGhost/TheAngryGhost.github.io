@@ -2,7 +2,7 @@ import { strong } from 'ellipsi';
 
 export const projectData = [
     {
-        title: 'Proto Robotics Web IDE',
+        title: 'PROTO Robotics Web IDE',
         label: 'Team Project',
         labelClass: 'badge bg-success',
         description:

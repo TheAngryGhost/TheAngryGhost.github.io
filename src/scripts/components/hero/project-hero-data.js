@@ -2,12 +2,12 @@ export const projectHeroData = {
     proto: {
         className: 'project-detail-hero-proto',
         logoSrc: 'https://raw.githubusercontent.com/proto-robotics/proto-robotics.github.io/main/images/proto-logo.png',
-        logoAlt: 'Proto Robotics logo',
+        logoAlt: 'PROTO Robotics logo',
         logoClass: 'project-logo-wide',
         headingClass: 'project-heading project-heading-wide d-flex align-items-center gap-3 mb-4',
         label: 'Team Project',
         labelClass: 'badge bg-success mb-2',
-        title: 'Proto Robotics Web IDE',
+        title: 'PROTO Robotics Web IDE',
         lead: 'The online block and line coding IDE used by PROTO, where I contributed production JavaScript across editor UX, Blockly integration, CodeMirror tooling, and the block generator.',
         meta: [
             ['Role', 'Contributor'],

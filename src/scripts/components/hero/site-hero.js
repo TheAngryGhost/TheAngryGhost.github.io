@@ -35,7 +35,7 @@ function homeHero() {
                     ),
                     p(
                         'I am a Robotics Undergraduate specializing in full-stack web development and low-level systems. Currently contributing to the ',
-                        strong('Proto Robotics'),
+                        strong('PROTO Robotics'),
                         ' Web IDE and developing high-performance audio architectures.',
                         { class: 'lead mb-4' },
                     ),
