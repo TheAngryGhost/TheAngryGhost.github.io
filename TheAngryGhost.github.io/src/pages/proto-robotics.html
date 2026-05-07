@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto Robotics Web IDE | Casper Turek</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <blue-orbit-background></blue-orbit-background>
+    <site-nav base-path="../../"></site-nav>
+
+    <main>
+        <site-hero variant="proto"></site-hero>
+
+        <section class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <h2 class="h3 fw-bold mb-3">Overview</h2>
+                    <p class="text-muted">
+                        PROTO is a modular robotics learning ecosystem built around classroom-ready hardware, curriculum, and a coding environment. The goal is to give students an approachable first build while still leaving room for deeper work with mechanisms, gearing, sensors, and structured engineering challenges.
+                    </p>
+                    <p class="text-muted">
+                        Proto Robotics Web IDE is the software side of that ecosystem: the main browser workspace students use to program the kit. My work focused on a high-value transition point: helping students move from visual block programming into readable line code while preserving guidance, feedback, and project state.
+                    </p>
+                    <p class="text-muted">
+                        One of my major contributions was the block generator I wrote called Jenga, which builds Blockly toolboxes and physical block definitions from structured JSON data. It lets richer inputs, generated block shapes, shadow blocks, inline layout controls, and editor metadata come from one source instead of being redefined across multiple files and workflows.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="http://code.protorobotics.org/" target="_blank" class="btn btn-primary">Open IDE</a>
+                        <a href="https://github.com/proto-robotics/proto-robotics.github.io" target="_blank" class="btn btn-outline-light">IDE Source</a>
+                        <a href="https://github.com/TheAngryGhost/code.protorobotics.org-fork" target="_blank" class="btn btn-outline-light">Original Fork</a>
+                        <a href="https://github.com/proto-robotics/jenga" target="_blank" class="btn btn-outline-light">Jenga Source</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="project-detail-panel mb-4">
+                        <h2 class="h4 fw-bold mb-3">Where the IDE Fits</h2>
+                        <ul class="text-muted mb-0">
+                            <li>PROTO combines hardware, curriculum, and software for classroom and after-school robotics programs.</li>
+                            <li>The coding environment connects the physical kit to the learning path, so students can move from building to testing robot behavior quickly.</li>
+                            <li>The IDE has to support both beginner-friendly block programming and a path toward text-based development as students grow.</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-panel">
+                        <h2 class="h4 fw-bold mb-3">Contribution Trail</h2>
+                        <ul class="text-muted">
+                            <li>16 commits in the IDE repo and 2 commits in the block generator library repo as <strong>TheAngryGhost</strong>.</li>
+                            <li>5 IDE commits currently visible on the dev branch.</li>
+                            <li>Original fork work later moved into the Proto Robotics organization repo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <h2 class="h3 fw-bold mb-4">Notable Engineering Work</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-lg-7">
+                    <img
+                        src="../../assets/current_block_coder.png"
+                        alt="Current Proto Robotics block coder interface"
+                        class="project-gallery-image"
+                    >
+                    <p class="project-meta mt-2 mb-0">PROTO Block Coding IDE</p>
+                </div>
+                <div class="col-lg-5">
+                    <h3 class="h4 fw-bold mb-3">PROTO Block Coding IDE</h3>
+                    <p class="text-muted">
+                        The block coder is the visual programming side of the IDE: students drag Blockly blocks into a workspace, generate readable code from that logic, and keep their work in a format that can move between visual and text-based editing.
+                    </p>
+                    <p class="text-muted mb-0">
+                        The open-in-line-editor flow helps students move from drag-and-drop Blockly logic into readable code, turning the IDE into a learning bridge rather than two disconnected editors.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3 class="h5 fw-bold">Friendly IDE for Students</h3>
+                        <p class="text-muted mb-0">
+                            The editor experience is designed for students moving from visual programming into real code, with readable feedback, smoother controls, and guidance that keeps the environment approachable without hiding the underlying programming model.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3 class="h5 fw-bold">Line Editor Workflow</h3>
+                        <ul class="text-muted">
+                            <li>Added the line coder as a text-based path through the IDE.</li>
+                            <li>Built the button flow for opening generated block code in the line editor.</li>
+                            <li>Used markdown parsing so autocomplete and function help could show richer documentation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3 class="h5 fw-bold">Block Generator</h3>
+                        <p class="text-muted">
+                            The block generator, called Jenga, turns structured JSON block definitions into Blockly blocks, toolbox entries, generated-code behavior, editor metadata, and UI details. I originally built it in my fork of the IDE, then it was copied into the main Proto Robotics site and later cleaned up and merged into the organization codebase.
+                        </p>
+                        <ul class="text-muted">
+                            <li><strong>JSON definitions:</strong> Generated Blockly blocks and toolbox structure from shared block data.</li>
+                            <li><strong>Block metadata:</strong> Added per-block autocomplete data so editor suggestions came from the same source as the blocks.</li>
+                            <li><strong>Custom fields:</strong> Added support for servo blocks, held-button checks, wait-while blocks, color fields, and grid dropdowns.</li>
+                            <li><strong>Workspace polish:</strong> Added save/load support, grid snap behavior, rotation symbols, and renderer customization hooks.</li>
+                            <li><strong>Production handoff:</strong> The work moved from my fork into the Proto Robotics organization repo, where it was cleaned up and merged into the shared codebase.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3 class="h5 fw-bold">Editor Reliability</h3>
+                        <ul class="text-muted mb-0">
+                            <li><strong>Custom linter:</strong> Wired syntax verification results into CodeMirror diagnostics.</li>
+                            <li><strong>Editor polish:</strong> Fixed focus stealing, right-click context menu behavior, and autocomplete positioning.</li>
+                            <li><strong>Block rendering:</strong> Fixed drivetrain clockwise and counter-clockwise icon rendering.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <h2 class="h3 fw-bold mb-4">In the Dev Branch</h2>
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <p class="text-muted">
+                        The dev branch includes additional work that has not landed on main yet. The strongest upcoming piece is a Blockly helper refactor that pulls workspace creation, mounting, resizing, serialization, code generation, change listeners, and cleanup into a reusable helper module.
+                    </p>
+                    <p class="text-muted">
+                        That refactor reduces coupling in the block editor and gives the team a cleaner place to handle Blockly behavior like parent containers, resize observers, generated Python output, and saved workspace state. The dev branch also includes custom renderer work that procedurally generates SVG graphics on the fly for PROTO-specific block shapes and visual styling.
+                    </p>
+                    <ul class="text-muted mb-0">
+                        <li>Created blocklyHelper for reusable Blockly workspace setup and lifecycle management.</li>
+                        <li>Renamed helper functions to avoid conflicts between CodeMirror and Blockly helper imports.</li>
+                        <li>Fixed drivetrain clockwise/counter-clockwise icon rendering for Blockly blocks.</li>
+                        <li>Added a custom Blockly renderer that procedurally generates SVG graphics for PROTO-specific connection shapes and block styling.</li>
+                        <li>Expanded block data and added a help icon path for richer block definitions.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <img
+                        src="../../assets/dev_block_coder.png"
+                        alt="Proto Robotics block coder development branch interface"
+                        class="project-gallery-image"
+                    >
+                    <p class="project-meta mt-2 mb-0">Dev Branch Block Coder</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <div class="project-detail-panel">
+                <h2 class="h3 fw-bold mb-3">Why This Matters</h2>
+                <ul class="text-muted mb-0">
+                    <li>The IDE sits at a real learning handoff, so changes have to respect both user experience and the underlying programming model instead of only solving the visible UI problem.</li>
+                    <li>Shared block definitions reduce duplicate logic across Blockly, generated code, autocomplete, and help text, which is the kind of structure that matters when a team has to keep adding features over time.</li>
+                    <li>Editor polish matters because small bugs in focus, autocomplete, diagnostics, or rendering can slow down every user and create support work for the rest of the team.</li>
+                    <li>The dev branch refactor points toward larger-project habits: reusable setup code, clearer ownership boundaries, and fewer editor views carrying their own slightly different Blockly lifecycle.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../../dist/main.bundle.js" defer></script>
+</body>
+</html>
