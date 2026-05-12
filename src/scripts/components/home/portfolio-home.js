@@ -1,4 +1,4 @@
-import { a, div, h2, h3, main, p, section, span, strong, tag } from 'ellipsi';
+import { a, div, h2, h3, li, main, p, section, span, strong, tag, ul } from 'ellipsi';
 import { projectData } from './project-data';
 
 export class PortfolioHome extends HTMLElement {
@@ -62,40 +62,59 @@ function aboutSection() {
     return section(
         { id: 'about', class: 'container py-5' },
         div(
-            { class: 'row' },
+            { class: 'row g-5' },
             div(
                 { class: 'col-lg-6' },
-                h2('Technical Skills', { class: 'fw-bold mb-4' }),
+                h2('What I Build With', { class: 'fw-bold mb-4' }),
                 skillGroup('Languages', [
-                    'JavaScript (ES6+)',
                     'Java',
+                    'JavaScript',
                     'Python',
-                    'C',
                     'SQL',
-                    'HTML5/CSS3',
+                    'HTML/CSS',
                 ]),
                 skillGroup('Tools & Frameworks', [
-                    'Bootstrap 5',
-                    'Ellipsi (Custom GUI)',
+                    'Blockly',
+                    'CodeMirror',
+                    'Bootstrap',
+                    'Ellipsi',
                     'Git / GitHub',
                     'Webpack',
-                    'Minecraft Modding (Mixins)',
+                    'Minecraft mixins',
+                ]),
+                skillGroup('Technical Themes', [
+                    'Code generation',
+                    'Data-driven architecture',
+                    'Robotics programming workflows',
+                    'Audio tooling',
+                    'Unfamiliar codebases',
                 ]),
             ),
             div(
                 { class: 'col-lg-6' },
-                h2('About Me', { class: 'fw-bold mb-4' }),
+                h2('About', { class: 'fw-bold mb-4' }),
                 p(
-                    'I am a freshman Robotics major with a passion for bridging the gap between hardware logic and software creativity. My journey began with independent projects like ',
-                    tag('em', 'Province of Music'),
-                    ', where I learned to architect complex systems alone. Today, I apply those skills collaboratively at ',
-                    strong('PROTO Robotics'),
-                    ', helping to build the next generation of STEM education tools.',
+                    'I am a Robotics Engineering student at the University of Nebraska-Lincoln who likes building tools with real users and enough internal structure to keep growing. My work so far has centered on robotics programming interfaces, generated code, editor behavior, and custom audio systems.',
                     { class: 'text-muted' },
                 ),
                 p(
-                    'I am currently looking for internships in Computer Science, Robotics, or Software Engineering where I can contribute to large-scale systems and continue learning.',
+                    'The projects below show the pattern better than a slogan can: at ',
+                    strong('PROTO Robotics'),
+                    ' I work inside a team codebase on the browser IDE students use to program robots; in ',
+                    tag('em', 'Province of Music'),
+                    ' I took a solo Java audio project from an idea to a documented release with thousands of downloads.',
                     { class: 'text-muted' },
+                ),
+                div(
+                    { class: 'project-detail-panel mt-4' },
+                    h3('Signals in the Work', { class: 'h5 fw-bold mb-3' }),
+                    ul(
+                        { class: 'text-muted mb-0' },
+                        li('Production JavaScript contributions in a robotics education IDE.'),
+                        li('A JSON-driven block generator that reduces duplicated Blockly/editor configuration.'),
+                        li('A released Java audio tool with sample-pack management, recording, and MIDI export workflows.'),
+                        li('Open-source project pages and repositories linked from each case study.'),
+                    ),
                 ),
             ),
         ),
@@ -122,16 +141,23 @@ function skillGroup(title, skills) {
 function contactSection() {
     return section(
         { id: 'contact', class: 'container py-5 text-center' },
-        h2("Let's Connect", { class: 'fw-bold mb-4' }),
-        p('Interested in my work or want to discuss robotics and software?', {
+        h2('Get in Touch', { class: 'fw-bold mb-4' }),
+        p('I am always glad to talk about robotics software, creative tools, and strange useful systems.', {
             class: 'lead text-muted mb-4',
         }),
         div(
-            { class: 'd-flex justify-content-center gap-4' },
-            a('Email Me', {
-                href: 'mailto:casperturek37@gmail.com',
-                class: 'btn btn-primary btn-lg',
-            }),
+            { class: 'd-flex justify-content-center gap-4 mb-3' },
+            div(
+                { class: 'd-flex flex-column align-items-center gap-2' },
+                a('Email Me', {
+                    href: 'mailto:casperturek37@gmail.com',
+                    class: 'btn btn-primary btn-lg',
+                }),
+                a('casperturek37@gmail.com', {
+                    href: 'mailto:casperturek37@gmail.com',
+                    class: 'text-info',
+                }),
+            ),
             a('GitHub', {
                 href: 'https://www.github.com/TheAngryGhost',
                 target: '_blank',

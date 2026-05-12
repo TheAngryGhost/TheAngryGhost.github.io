@@ -30,13 +30,11 @@ function homeHero() {
                 div(
                     { class: 'col-lg-8' },
                     h1(
-                        'Building Robotics Software & Custom Audio Engines',
+                        'Robotics software, custom tools, and systems that ship',
                         { class: 'display-4 fw-bold mb-3' },
                     ),
                     p(
-                        'I am a Robotics Undergraduate specializing in full-stack web development and low-level systems. Currently contributing to the ',
-                        strong('PROTO Robotics'),
-                        ' Web IDE and developing high-performance audio architectures.',
+                        'I am a software developer and robotics engineering student who builds reliable tools, learns complex codebases quickly, and turns messy technical problems into systems people can actually use.',
                         { class: 'lead mb-4' },
                     ),
                     div(

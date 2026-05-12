@@ -6,10 +6,10 @@ export const projectData = [
         label: 'Team Project',
         labelClass: 'badge bg-success',
         description:
-            'A browser-based robotics programming IDE where students build Blockly programs, inspect generated code, and move toward text-based development.',
+            'A production browser IDE for classroom robotics, with Blockly workflows, generated code, CodeMirror editing, and project save/load behavior.',
         stack: ['JavaScript', 'Blockly', 'CodeMirror', 'Jenga'],
         body: [
-            'My work improved the bridge from block coding to text coding, including generated-code workflows, editor tooling, and custom Blockly rendering for student robotics projects.',
+            'Contributed editor UX, syntax feedback, autocomplete, Blockly integration, and a JSON-driven block generator that keeps block definitions, toolbox data, code output, and editor metadata closer together.',
         ],
         buttonClass: 'btn btn-outline-primary stretched-link',
         href: 'src/pages/proto-robotics.html',
@@ -19,10 +19,10 @@ export const projectData = [
         label: 'Solo Project',
         labelClass: 'badge bg-warning text-dark',
         description:
-            'A custom audio engine that replaces simple generated playback with high-fidelity user sample packs, recording tools, and MIDI export workflows.',
+            'A released custom audio engine for user-managed sample packs, recording tools, MIDI export, and higher-fidelity generated playback.',
         stack: ['Java', 'Mixins', 'Multi-threading', 'Audio Processing'],
         body: [
-            'Designed from scratch to solve a specific user pain point. Reached ',
+            'Designed, documented, released, and maintained as open-source software. Reached ',
             strong('6.6k+ Modrinth downloads'),
             ' through launch content, search, community recommendations, and third-party modpacks.',
         ],
